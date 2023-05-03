@@ -1,0 +1,386 @@
+
+html,body {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+
+
+body{
+    background-color: rgb(255, 251, 245);
+    margin: 0%;
+}
+.container-fluid .navbar{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 7.5rem;
+    background-color: rgb(255, 251, 245);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 3rem;
+    transition:height 0.5s;
+    padding: 0;
+    margin-left: 0;
+}
+.navbar.change{
+    height: 100vh;
+}
+.logo{
+    font-family: "Playfair Display";
+    color: goldenrod;
+    font-size: 40px;
+    position: absolute;
+    top: 2rem;
+    letter-spacing: 2px;
+    padding-left: 29px;
+}
+.nav-list{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+}
+.change .nav-list{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s 0.5s;
+}
+.nav-link{
+    font-family: "Crimson Text";
+    font-size: 35px;
+    color: silver;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    transition: color 0.4s;
+}
+.nav-link:hover{
+    color: goldenrod;
+}
+.menu{
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.line{
+    width: 100%;
+    height: .2rem;
+    background-color: goldenrod;
+}
+.heading{
+    font-family: "Cormorant Garamond";
+padding-top: 10px;
+    text-align: center;
+    color: goldenrod;
+    font-size: 60px;
+}
+.sub-heading{
+    font-family: "Crimson Text";
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+
+/*end of navbar*/
+.container-fluid.images{
+    padding-left: 0;
+    padding-right: 0;  
+    background: rgba(0,0,0,0.7) url(coco.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+  margin: 0;
+   
+}
+h1{
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+.heading{
+    padding-top: 200px;
+    animation-name: head;
+}
+.sub-heading{
+    padding-bottom: 250px;
+    color: silver;
+}
+@keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  .text-heading{
+    font-family: "Playfair Dispay";
+    text-align: center;
+    color: goldenrod;
+    font-size: 40px;
+    max-width: 600px;
+  }
+  h1::before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: ;
+  }
+  .text-para{
+    text-align: center;
+    color: silver;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Dancing Script";
+    font-size: 30px;
+  }
+  .scroll{
+    font-family: "Playfair Display";
+    text-align: center;
+    color: silver;
+  }
+  .scroll:hover{
+    color: goldenrod;
+  }
+  
+
+
+
+
+
+  .col-sm-12.col-lg-4.container{
+    position: relative;
+    padding-left: 50px;
+    padding-right: 70px;
+   
+  }
+  .image {
+    display: block;
+    width: 400px;
+    height: 300px;
+    border-radius: 200px;
+    
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 450px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(255, 251, 245);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: goldenrod;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Dancing Script";
+  }
+  .col-sm-4.col-lg-4{
+    color: goldenrod;
+  }
+  
+
+  /*section-2*/
+  .section-2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 251, 245);
+    display: flex;
+    padding: 0;
+    align-items: center;
+    padding: 0 10rem;
+    position: relative;
+    right:5rem;
+  }
+  .section-heading{
+    font-family: "Playfair Display";
+    font-size: 5rem;
+    font-weight: 30;
+    color: goldenrod;
+  }
+  .aboutuspara{
+    position: absolute;
+    left: 50rem;
+    font-size: 30px;
+    color: rgb(163, 159, 159);
+    border-top: .5rem double goldenrod;
+    border-bottom: .5rem double goldenrod;
+    font-family: "Dancing Script";
+  }
+  .photo1{
+    height: 500px;
+    width: 350px;
+    padding-left: 50px;
+  }
+  .photos2{
+    height: 500px;
+    width: 350px;
+  }
+  .photos3{
+    height: 500px;
+    width: 350px;
+    padding-left: 50px;
+  }
+  .model-section{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+  }
+ .photo{
+  height: 500px;
+  width: 350px;
+  padding-left: 20px;
+ }
+ .photos{
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+  opacity: 0;
+  transition: .7s ease;
+  
+ }
+ .photo{
+  padding-left: 30px;
+  border-radius: 50%;
+  
+  
+ }
+ .texts{
+  align-items: center;
+  font-family: "Dancing Script";
+  color: goldenrod;
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  left: 30%;
+  transition: .7s ease;
+
+ }
+ .newarrivals{
+  cursor: pointer;
+ }
+ .newarrivals:hover .photos{
+  opacity: 1;
+ }
+ .newarrivals:hover .texts{
+  opacity: 0;
+ }
+ .location{
+  background: rgba(0,0,0,0.65) url(perfume4.jpg);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+ }
+ .map{
+  align-items: center;
+  padding-left: 15rem;
+  padding-top: 20px;
+  font-family: "Dancing script";
+  color: rgb(255, 251, 245);
+  font-size: 50px;
+ }
+ .iframe{
+  padding-left: 10rem;
+ }
+.footer{
+  background-color: rgb(247, 209, 114);
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-facebook {
+  background: rgb(247, 209, 114);
+  color: rgb(39, 37, 37);
+  padding-top: 70px;
+  padding-left: 35rem;
+}
+.fa-twitter{
+  background: rgb(247, 209, 114);
+  color: rgb(39, 37, 37);
+  padding-top: 70px;
+  padding-left: 0rem;
+}
+.fa-instagram{
+  background: rgb(247, 209, 114);
+  color: rgb(39, 37, 37);
+  padding-top: 70px;
+  padding-left: 0rem;
+}
+.footertext{
+  padding-left: 33rem;
+  color: rgb(39, 37, 37);
+  font-family: "Playfair Display";
+  font-size: 20px;
+}
+.copyright{
+  padding-left: 37rem;
+}
